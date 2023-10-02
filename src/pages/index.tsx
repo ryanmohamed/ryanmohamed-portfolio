@@ -1,127 +1,47 @@
 import Hero from '@/components/Hero';
-import Projects from '../../lib/Projects';
-import Thumbnail from '@/components/Thumbnail';
-import { useEffect, useState, useRef } from 'react';
-import Project, { ProjectType } from '@/components/Project';
+import Experience from '@/components/Experience';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import ProjectsGrid from '@/components/ProjectsGrid';
 
-import { AnimatePresence, motion } from "framer-motion";
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Image from 'next/image';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+const BulletPoint = ({ className, left, ...props }: {
+  className: string,
+  left?: boolean
+}) => {
+  return (
+    <div className="centered flex-col relative">
+
+      <div className={`absolute top-0 ${ left ? "left-0" : "right-0"} aspect-video w-2/5 p-4 border-stone-600 border-2`}>
+        <h4>Example</h4>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nam nostrum, a unde qui velit maxime molestias dicta beatae earum vitae similique deleniti autem doloribus pariatur. Quae quo at veritatis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nam nostrum, a unde qui velit maxime molestias dicta beatae earum vitae similique deleniti autem doloribus pariatur. Quae quo at veritatis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nam nostrum, a unde qui velit maxime molestias dicta beatae earum vitae similique deleniti autem doloribus pariatur. Quae quo at veritatis!</p>
+      </div>
+
+      <svg className={`max-w-[20px] ${className}`} viewBox="0 0 8 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="4" cy="4" r="4" fill="#D9D9D9" stroke="none"/>
+        <path d="M4 11L3.99999 146" strokeLinecap="round"/>
+      </svg>
+    </div>
+  );
+}
 
 export default function Home() {
 
-  const [ selectedProject, setSelectedProject ] = useState<ProjectType | null>(null); 
-  const popupRef = useRef<HTMLDivElement>(null);
 
-  const handleClickOutside = (event: any) => {
-    if (popupRef.current && !popupRef.current.contains(event.target)) {
-      setSelectedProject(null);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (selectedProject !== null) {
-  //       document.body.style.overflow = 'hidden';
-  //     } else {
-  //       document.body.style.overflow = 'auto';
-  //     }
-  //   };
-  
-  //   handleScroll();
-  
-  //   return () => {
-  //     document.body.style.overflow = 'auto';
-  //   };
-  // }, [selectedProject]);  
 
   return (
-    <main className="min-screen-h w-full">
+    <main className="min-screen-h w-full relative">
+
+      <div className="aspect-sqaure 2xl:w-96 xl:w-72 w-64 2xl:h-96 xl:h-72 h-64 rounded-full bg-accent-500/30 blur-[7.5rem] absolute top-10 lg:left-[20%] md:left-36 left-[5rem]  -z-30 ">
+        <div className="aspect-sqaure 2xl:w-[30rem] xl:w-[24rem] lg:w-[20rem] w-64 2xl:h-[30rem] xl:h-[24rem] lg:h-[20rem] h-64 rounded-full bg-purple-400/30 absolute top-[50%] left-[70%] -z-25 "></div>
+      </div>
+
       <Hero />
-
-      <section id="projects" className="default-p-x w-full">
-        <div className="mb-10">
-          <h1 className="font-bebas text-stone-900">Projects</h1>
-        </div>
-        
-        {/* grid */}
-        <div className="w-full grid grid-flow-row-dense grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {Object.entries(Projects).map(([key, project], index) => {
-            let classes = "transition row-span-1 col-span-1";
-            if (index % 9 === 0 || index % 7 === 0) {
-              classes = "lg:row-span-2 col-span-2";
-            }
-            return (
-              <Thumbnail
-                idx={index}
-                key={key}
-                project={project}
-                className={`${classes} min-h-[100px]`}
-                toggler={setSelectedProject}
-              />
-            );
-          })}
-        </div>
-
-        <AnimatePresence mode="wait">
-          {
-            selectedProject && (
-              
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1  }}
-                exit={{ opacity: 0 }}
-                className="z-[201] centered fixed top-0 left-0 w-screen h-screen bg-black/50"
-              >
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1  }}
-                  exit={{ opacity: 0 }}
-                  ref={popupRef} 
-                  className="overflow-y-scroll md:p-20 p-4 flex flex-col lg:flex-row z-[201] w-[95vw] h-[95vh] bg-white dark:bg-stone-950 border-2 shadow-md shadow-black/30"
-                >
-                  <Project project={selectedProject} />
-                </motion.div>
-
-              </motion.div>
-            )
-          }
-        </AnimatePresence>
-
-      </section>
+      <ProjectsGrid />
+      <Experience />
+      <Contact />
+      <Footer />
 
     </main>
   )
 }
 
-
-{
-  // Object.entries(Projects).map(([name, data], idx) => {
-  //   return (
-  //     <div key={idx} className={`p-2 ${idx===0||idx===50?"lg:col-span-2" : "lg:col-span-1 lg:row-span-1"} ${idx%2===0?"bg-blue-100":"bg-red-100"}`}>
-  //       <button className="aspect-square w-full bg-purple-500/10">
-  //         {/* <h4>{name}</h4> */}
-  //       </button>
-  //     </div>
-  //   );
-  // })
-
-  // [1,2,3,4,5,6,7,8,9].map((num, idx) => {
-  //   return (
-  //     <div key={idx} className={`p-2 ${idx===0||idx===5?"lg:col-span-2 lg:row-span-2" : "lg:col-span-1 lg:row-span-1"} ${idx%2===0?"bg-blue-100":"bg-red-100"}`}>
-  //       <button className="aspect-square w-full bg-purple-700 transition">
-  //         <h4>Hello</h4>
-  //       </button>
-  //     </div>
-  //   );
-  // })
-}

@@ -9,14 +9,17 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-bebas text-stone-800 dark:text-stone-100;
   }
-  p, span, li {
-    @apply font-space;
+  p, span, li, small {
+    @apply font-space dark:text-stone-400;
   }
   p {
-    @apply text-stone-600 dark:text-stone-200;
+    @apply text-stone-600 dark:text-stone-400;
   }
   li {
-    @apply text-stone-700 dark:text-stone-50;
+    @apply text-stone-700 dark:text-stone-500;
+  }
+  small {
+    @apply text-stone-500 dark:text-stone-400/90;
   }
   h1 {
     @apply font-bold md:text-6xl text-5xl;
@@ -48,8 +51,29 @@
   .tabable {
     @apply outline-none active:ring-2 focus:ring-2 ring-accent-700;
   }
+  .hoverable {
+    @apply outline-none hover:ring-2 ring-accent-700;
+  }
   .cta {
     @apply mt-6 p-2 centered w-1/2 h-full bg-accent-500 dark:bg-accent-50 transition hover:bg-accent-10 focus:bg-accent-10 active:bg-accent-10 outline-none;
+  }
+  .project-sh {
+    @apply text-xl font-medium font-space;
+  }
+  .cta-btn {
+    @apply p-1 md:h-12 h-10 rounded-full centered transition border-[2px] border-stone-950 hover:border-stone-600 dark:border-stone-400 dark:hover:border-white;
+  }
+  .pretty-inp {
+    @apply mt-1 h-12 w-full centered p-2 rounded-sm bg-stone-100 border-2 border-stone-200 font-space text-stone-900 ; 
+  }
+  .error-msg {
+    @apply animate-shake my-2 text-red-500 font-space text-sm first-letter:capitalize after:content-["."];
+  }
+  .footer-link {
+    @apply text-stone-300/75 text-sm hover:text-white focus:text-white active:text-white;
+  }
+  .exp-item {
+    @apply mb-3;
   }
 }
 
@@ -62,10 +86,12 @@
     scrollbar-width: none;  /* Firefox */
   }
   .screen-h {
-    height: calc(100vh - 110px);
+    /* height: calc(100vh - 110px); */
+    height: calc(100vh);
   }
   .min-screen-h {
-    height: calc(100vh - 110px);
+    /* min-height: calc(100vh - 110px); */
+    min-height: calc(100vh);
   }
   .nav-h {
     height: 110px;
@@ -76,6 +102,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  z-index: 1;
 }
 
 html,

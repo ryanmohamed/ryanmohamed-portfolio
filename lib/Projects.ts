@@ -5,92 +5,169 @@ const Projects: Record<string, ProjectType> = {
         name: "After School Startup",
         blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+        date: new Date(1692248286),
         images: [
           "/thumbnails/afterschoolstartup.png",
           "/afterschoolstartup/1.png",
           "/afterschoolstartup/2.png"
+        ],      
+        videos: [
+          "/vids/AfterSchoolStartup.mp4",
         ],
         skills: [
           "TypeScript",
+          "Tailwind CSS",
           "Next.js",
           "Firebase",
           "Google Cloud Platform (GCP)",
           "PayPal",
-          "Server-Side Rendering"
+          "Server-Side Rendering",
+          "REST API"
         ],
         additionalSkills: [
-          "TypeScript",
+          "Software Development Life Cycle",
+          "Agile",
+          "REST API",
+          "GitHub",
+          "Version Control",
+          "CI/CD",
+          "Vercel",
+          "React",
+          "JavaScript",
           "Next.js",
           "Firebase",
           "Google Cloud Platform (GCP)",
+          "NoSQL",
+          "OpenAI",
           "PayPal",
-          "Server-Side Rendering"
+          "Stripe",
+          "RevenueCat",
+          "Webhooks",
+          "Middleware",
+          "Server-Side Rendering",
+          "Payment Processing"
         ],
-        date: new Date(),
+        paradigms: [],
         languages: ["TypeScript"],
         associatedWith: ["i4software"],
-        link: "https://www.afterschoolstartup.com"
+        link: "https://www.afterschoolstartup.com",
+        github: "sd"
     },
 
     Fitbyte: {
         name: "Fitbyte",
-        blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
-        desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+        blurb: "An AI-powered cross platform web app to generate personally optimized meal and fitness plans. Sign in and generate and save fitness plans at no cost. Pro memberships unlock access to progress statistics, macro information, weigh-ins, goal tracking and optimized fitness plan.",
+        desc: "Responsible for system architecture, version control and CI/CD pipeline. Integrated authentication, NoSQL database, streaming OpenAI API responses, payment gateway, webhooks, external and internal API endpoints, and securely server-side rendered pages.",
         images: [
           "/thumbnails/fitbyte.png",
-          "/afterschoolstartup/1.png",
-          "/afterschoolstartup/2.png"
+          "/fitbyte/1.png",
+          "/fitbyte/2.png",
+          "/fitbyte/3.png",
+        ],      
+        videos: [
+          "/vids/Fitbyte.mp4",
+        ],
+        skills: [
+          "JavaScript",
+          "Next.js",
+          "Firebase",
+          "Google Cloud Platform (GCP)",
+          "NoSQL",
+          "OpenAI",
+          "PayPal",
+          "REST API",
+          "Server-Side Rendering",
+          "Tailwind CSS"
+        ],
+        additionalSkills: [
+          "Software Development Life Cycle",
+          "Agile",
+          "GitHub",
+          "REST API",
+          "Streaming",
+          "Version Control",
+          "CI/CD",
+          "Vercel",
+          "React",
+          "JavaScript",
+          "Next.js",
+          "Firebase",
+          "Google Cloud Platform (GCP)",
+          "NoSQL",
+          "OpenAI",
+          "PayPal",
+          "Stripe",
+          "RevenueCat",
+          "Middleware",
+          "Server-Side Rendering",
+          "Payment Processing"
+        ],
+        languages: ["JavaScript"],
+        associatedWith: ["i4software"],
+        link: "https://www.fitbyte.me"
+    },
+
+    RestaurantRodeo: {
+        name: "Restaurant Rodeo",
+        blurb: "Restaurant Rodeo is a small full-stack project for finding restaurants in your local area or area of preference.",
+        desc: "The project is a demonstration of best practices when it comes to consumption of external REST APIs. This involves techniques such as server-side rendering (SSR), caching, proxied API endpoints, and debouncing. The project mainly makes use of the Yelp Fusion API, Distance Matrix API, and the Google Maps for JavaScript API.",
+        images: [
+          "/thumbnails/restaurantrodeo.png",
+          "/restaurantrodeo/6.png",
+          "/restaurantrodeo/2.png",
+          "/restaurantrodeo/4.png",
+          "/restaurantrodeo/5.png",
+        ],
+        videos: [
+          "/vids/RestaurantRodeo.mp4",
         ],
         skills: [
           "TypeScript",
           "Next.js",
-          "Firebase",
+          "Tailwind CSS",
+          "REST API",
           "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+          "Server-Side Rendering",
+          "Geocoding",
+          "Caching",
         ],
         languages: ["TypeScript"],
         associatedWith: ["i4software"],
-        link: "https://www.afterschoolstartup.com"
+        link: "https://restaurantrodeo.netlify.app",
+        github: "https://github.com/ryanmohamed/restaurant-roulette"
+
     },
 
     Tada: {
         name: "Ta-da",
         blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
-        desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+        desc: "Responsible for system architecture, version control and CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
         images: [
-          "/thumbnails/tada.png",
-          "/afterschoolstartup/1.png",
-          "/afterschoolstartup/2.png"
+          "/thumbnails/tada.png"
         ],
         skills: [
           "TypeScript",
           "Next.js",
           "Firebase",
           "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+          "Tailwind CSS"
         ],
-        languages: ["TypeScript"],
-        associatedWith: ["i4software"],
-        link: "https://www.afterschoolstartup.com"
-    },
-
-    RestaurantRodeo: {
-        name: "Restaurant Rodeo",
-        blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
-        desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
-        images: [
-          "/thumbnails/restaurantrodeo.png",
-          "/afterschoolstartup/1.png",
-          "/afterschoolstartup/2.png"
-        ],
-        skills: [
+        additionalSkills: [
+          "Software Development Life Cycle",
+          "Agile",
+          "REST API",
+          "GitHub",
+          "Version Control",
+          "CI/CD",
+          "Vercel",
+          "React",
           "TypeScript",
           "Next.js",
           "Firebase",
           "Google Cloud Platform (GCP)",
-          "PayPal",
+          "Tailwind CSS",
+          "NoSQL",
+          "OpenAI",
           "Server-Side Rendering"
         ],
         languages: ["TypeScript"],
@@ -100,24 +177,49 @@ const Projects: Record<string, ProjectType> = {
 
     PetmatcherV1: {
       name: "Petmatcher v1",
-      blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
-      desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+      blurb: "Petmatcher is a scalable and authenticated full-stack web app, aimed towards family, friends, or couples looking to find their ideal pet in a pleasant interactive pair up.",
+      desc: "Responsible for system architecture, JWT authentication, MySQL ORM integration, WebSocket integration, and general UI/UX design. Architected and implemented a pair-up system of rooms, where users synchronously answer prompts, providing keywords for image generation.",
       images: [
         "/thumbnails/petmatcherv1.png",
-        "/afterschoolstartup/1.png",
-        "/afterschoolstartup/2.png"
+      ],
+      videos: [
+        "/vids/Petmatcher_Demo.mp4",
       ],
       skills: [
-        "TypeScript",
-        "Next.js",
-        "Firebase",
-        "Google Cloud Platform (GCP)",
-        "PayPal",
-        "Server-Side Rendering"
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "JWT Authentication",
+        "MySQL",
+        "WebSockets",
+        "REST API",
+        "CSS"
       ],
-      languages: ["TypeScript"],
-      associatedWith: ["i4software"],
-      link: "https://www.afterschoolstartup.com"
+      additionalSkills: [
+        "Full-stack development",
+        "Collaborative Coding",
+        "Agile",
+        "Requirements Analysis",
+        "Unit Testing",
+        "Integration Testing",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "JWT Authentication",
+        "WebSockets",
+        "MySQL",
+        "ORM",
+        "Sequelize",
+        "Event-Driven Development",
+        "REST API",
+        "CSS"
+      ],
+      languages: ["JavaScript", "Node.js", "SQL"],
+      associatedWith: ["queenscollege"],
+      link: "https://petmatcher.netlify.app",
+      github: "https://github.com/ryanmohamed/pandagum-client"
     },
 
     PortfolioV1: {
@@ -126,8 +228,6 @@ const Projects: Record<string, ProjectType> = {
       desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
       images: [
         "/thumbnails/portfoliov1.png",
-        "/afterschoolstartup/1.png",
-        "/afterschoolstartup/2.png"
       ],
       skills: [
         "TypeScript",
@@ -137,74 +237,117 @@ const Projects: Record<string, ProjectType> = {
         "PayPal",
         "Server-Side Rendering"
       ],
-      languages: ["TypeScript"],
-      associatedWith: ["i4software"],
-      link: "https://www.afterschoolstartup.com"
+      languages: ["JavaScript"],
+      associatedWith: ["personal"],
+      link: "https://ryanmohamed.netlify.app",
+      github: "https://github.com/ryanmohamed/next-portfolio"
     },
 
     Quizitiv: {
         name: "Quizitiv",
-        blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
+        blurb: "Quizitiv is platform for creating and taking quizzes in a knowledge-sharing based community. Taking quizzes created by others and scoring enough can grant you experience points, of which you can use to modify and play games on the site.",
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
         images: [
           "/thumbnails/quizitiv.png",
-          "/afterschoolstartup/1.png",
-          "/afterschoolstartup/2.png"
+        ],      
+        videos: [
+          "/vids/Quizitiv.mp4",
         ],
         skills: [
           "TypeScript",
           "Next.js",
+          "Ruby",
+          "Sinatra",
           "Firebase",
           "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+          "NoSQL",
+          "Tailwind CSS"
         ],
-        languages: ["TypeScript"],
-        associatedWith: ["i4software"],
-        link: "https://www.afterschoolstartup.com"
+        languages: ["TypeScript", "Ruby"],
+        associatedWith: ["thecoderschool"],
+        link: "https://quizitiv.netlify.app",
+        github: "https://github.com/ryanmohamed/pandagum-client"
     },
 
     PetmatcherV2: {
       name: "Petmatcher v2",
-      blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
-      desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+      blurb: "AI Matcher is a large-scale full-stack project for prompting and sharing team prompted AI generated images in real time.",
+      desc: "The project is split into a dual-architecture with social media operations following standard MVC and CRUD principles using Prisma as an ORM and tRPC as the authenticated controller in the back-end. Real-time connections from clients directly to the game pool and game rooms are authenticated and handled by an external socket server written with Express in Node.js. Sensitive middleware operations between web server and socket server are handled via a standard REST API endpoint on the socket server.",
       images: [
         "/thumbnails/petmatcherv2.png",
-        "/afterschoolstartup/1.png",
-        "/afterschoolstartup/2.png"
+      ],
+      videos: [
+        "/vids/StripeOpenAI.mp4",
       ],
       skills: [
         "TypeScript",
         "Next.js",
-        "Firebase",
         "Google Cloud Platform (GCP)",
-        "PayPal",
+        "PostgreSQL",
+        "ORM",
+        "Prisma",
+        "Docker",
+        "Redis",
+        "Stripe",
+        "DALLE-2",
+        "WebSockets",
+        "REST API",
+        "RPC",
+        "Tailwind CSS",
         "Server-Side Rendering"
       ],
-      languages: ["TypeScript"],
-      associatedWith: ["i4software"],
-      link: "https://www.afterschoolstartup.com"
+      languages: ["TypeScript", "PostgreSQL"],
+      associatedWith: ["personal"],
+      link: "https://github.com/ryanmohamed/stripe-openai-socket-generation",
+      github: "https://github.com/ryanmohamed/stripe-openai-socket-generation"
   },
 
     TSQL: {
-        name: "T-SQL Final",
-        blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
-        desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+        name: "Data Migration + JDBC",
+        blurb: "A final project for my database course tackled in a team of agile developers.",
+        desc: "Responsible for migrating data from BI tool to a normalized database schema through ER diagrams, stored procedures, constraints, and data validation processes. Key tasks included the design and implementation of a robust database structure in Microsoft SQL Server, ensuring data integrity and optimization through normalization techniques. Developed and executed JDBC (Java Database Connectivity) queries for data retrieval and basic visualization to enhance data interpretability.",
         images: [
-          "/afterschoolstartup/1.png",
-          "/afterschoolstartup/2.png"
+          "/thumbnails/jdbc.png",
+          "/jdbc/1.png",
+          "/jdbc/2.png",
+          "/jdbc/3.png"
+        ],
+        videos: [
+          '/vids/jdbc.mp4'
         ],
         skills: [
-          "TypeScript",
-          "Next.js",
-          "Firebase",
-          "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+          "Java",
+          "SQL",
+          "T-SQL",
+          "Microsoft SQL Server",
+          "Docker",
+          "Linux"
         ],
-        languages: ["TypeScript"],
-        associatedWith: ["i4software"],
-        link: "https://www.afterschoolstartup.com"
+        additionalSkills: [
+          "Software Development Life Cycle",
+          "Agile",
+          "JIRA",
+          "Teamwork",
+          "Collaborative Code",
+          "Version Control",
+          "SQL",
+          "T-SQL",
+          "Java",
+          "JDBC",
+          "Microsoft SQL Server",
+          "Docker",
+          "Linux",
+          "RDBMS",
+          "Entity Relationship Diagrams",
+          "Data Normalization",
+          "Stored Procedures",
+          "Constraints",
+          "UDTs",
+          "Data Visualization",
+        ],
+        languages: ["Java", "SQL", "T-SQL"],
+        associatedWith: ["queenscollege"],
+        github: "https://github.com/JDBC-Class-Library/JDBC-Final"
     },
 
     UNET: {
@@ -213,19 +356,20 @@ const Projects: Record<string, ProjectType> = {
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
         images: [
           "/thumbnails/unet.png",
-          "/afterschoolstartup/1.png",
-          "/afterschoolstartup/2.png"
         ],
         skills: [
-          "TypeScript",
-          "Next.js",
-          "Firebase",
-          "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+          "Python",
+          "Tensorflow",
+          "Keras",
+          "Matplotlib",
+          "NumPy",
+          "Convolutional Neural Network",
+          "Deep Learning",
+          "U-NET Architecture",
+          "Biomedical Image Analysis"
         ],
         languages: ["TypeScript"],
-        associatedWith: ["i4software"],
+        associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
     },
 
@@ -237,16 +381,21 @@ const Projects: Record<string, ProjectType> = {
           "/afterschoolstartup/1.png",
           "/afterschoolstartup/2.png"
         ],
-        skills: [
-          "TypeScript",
-          "Next.js",
-          "Firebase",
-          "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+        videos: [
+          "/vids/Student.mp4",
         ],
-        languages: ["TypeScript"],
-        associatedWith: ["i4software"],
+        skills: [
+          "JavaScript",
+          "Node.js",
+          "React",
+          "Express",
+          "MySQL",
+          "Sequelize",
+          "ORM",
+          "REST API"
+        ],
+        languages: ["JavaScript", "SQL"],
+        associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
     },
 
@@ -256,8 +405,9 @@ const Projects: Record<string, ProjectType> = {
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
         images: [
           "/thumbnails/oauth.png",
-          "/afterschoolstartup/1.png",
-          "/afterschoolstartup/2.png"
+        ],
+        videos: [
+          "/vids/Blogger.mp4",
         ],
         skills: [
           "TypeScript",
@@ -268,7 +418,7 @@ const Projects: Record<string, ProjectType> = {
           "Server-Side Rendering"
         ],
         languages: ["TypeScript"],
-        associatedWith: ["i4software"],
+        associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
     },
 
@@ -289,7 +439,7 @@ const Projects: Record<string, ProjectType> = {
           "Server-Side Rendering"
         ],
         languages: ["TypeScript"],
-        associatedWith: ["i4software"],
+        associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
     },
 
@@ -310,7 +460,7 @@ const Projects: Record<string, ProjectType> = {
           "Server-Side Rendering"
         ],
         languages: ["TypeScript"],
-        associatedWith: ["i4software"],
+        associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
     }
 
