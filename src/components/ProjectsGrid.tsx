@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react'
 import Section from './Section';
 import Thumbnail from './Thumbnail';
 import Project, { ProjectType } from './Project';
@@ -6,6 +6,7 @@ import Projects from '../../lib/Projects';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const ProjectsGrid = () => {
+    const [ filteredProjects, setFilteredProjects ] = useState<ProjectType[] | null>(Object.values(Projects)); 
     const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
     const popupRef = useRef<HTMLDivElement>(null);
 
@@ -47,11 +48,44 @@ const ProjectsGrid = () => {
 
     }, [selectedProject]);
 
+    useEffect(() => {
+        if (!filteredProjects || filteredProjects.length === 0) {
+            setFilteredProjects(Object.values(Projects));
+        }
+    }, []);
+
+    // terrible run time, pls redo at scale
+    const handleInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+        const searchTerm = e.target?.value || "";
+        const results = [];
+        for(let project of Object.values(Projects)) {
+            const concatenated = project.languages.concat(project.skills.concat(project.additionalSkills || []));
+            const cleanedProjectTerms = concatenated.map(str => str.toLowerCase());
+            for (let projectTerm of cleanedProjectTerms) {
+                if (projectTerm.startsWith(searchTerm.toLowerCase())) {
+                    results.push(project);
+                    break;
+                }
+            }
+        }
+        setFilteredProjects(results);
+    };
+
     return (
         <Section id="projects" name="Projects" subtitle="Some of examples of my work. Click a tile to see more. 🦄">
+            
+            {/* <div>
+                <p>Search by technology:</p>
+                <input placeholder="(ex: SQL)" onChange={handleInputChange}/>
+                {["JavaScript", "SQL", "TypeScript"].map((language, index) => {
+                    return <button className="bg-accent-500 text-white p-4 mx-1" key={index}>{language}</button>
+                })}
+            </div> */}
+            
             {/* grid */}
-            <div className="w-full grid grid-flow-row-dense grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                {Object.entries(Projects).map(([key, project], index) => {
+            <div className="w-full grid grid-flow-row-dense grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+                { filteredProjects?.length !== Object.values(Projects).length && <p>Search results for</p>}
+                {filteredProjects?.map((project, index) => {
                     let classes = "transition row-span-1 col-span-1";
                     if (index % 9 === 0 || index % 7 === 0) {
                         classes = "lg:row-span-2 col-span-2";
@@ -59,7 +93,7 @@ const ProjectsGrid = () => {
                     return (
                         <Thumbnail
                             idx={index}
-                            key={key}
+                            key={index}
                             project={project}
                             className={`${classes} min-h-[100px]`}
                             toggler={setSelectedProject}

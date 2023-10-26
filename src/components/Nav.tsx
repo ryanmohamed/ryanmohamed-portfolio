@@ -18,8 +18,8 @@ export default function Nav () {
     }, [scrolled]);
     return (
         <div className=" top-0 left-0 w-full z-[200]">
-            <div className="w-full h-[40px] bg-accent-700">
-
+            <div className="centered text-center w-full h-[40px] bg-accent-700">
+                <p className="text-stone-300">This portfolio is <b>in progress</b>. Please await some awesome features 🦄</p>
             </div>
             <nav className={`default-p-x flex items-center justify-between w-full h-[70px] transition-all duration-300  ${
                 scrolled ? "bg-white dark:bg-stone-900 shadow-md" : "bg-white dark:bg-stone-900"

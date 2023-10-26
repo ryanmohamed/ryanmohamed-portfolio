@@ -60,20 +60,10 @@ export default function Thumbnail ({
 
     return (
         <button onClick={() => toggler(project)} className={`text-left outline-none group ${className}`} {...props}>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className={`flex flex-col justify-between rounded-md transition shadow-xl group-hover:shadow-black/100 shadow-black/30 ring-4 ring-transparent group-hover:ring-accent-500 group-focus:ring-accent-500 group-active:ring-accent-500 relative aspect-square w-full overflow-hidden ${getBg(idx)}`}>
-                <Image src={images[0]} alt="image" fill={true} objectFit="cover" className="mt-16 z-[25] absolute top-0 left-0 max-w-full h-auto" />
-                <div className="centered justify-start z-[27] relative h-16 px-4 overflow-hidden">
-                    {/* <div className="aspect-square h-16 w-16 bg-purple-500 absolute top-1/2 -translate-y-1/2 left-12 blur-xl rounded-full"></div> */}
-                    <h6 className="font-space font-semibold">{name}</h6>
-                    {/* <p className="md:block hidden text-xs">{blurb.length > 64 ? blurb.slice(0,64) + "..." : blurb }</p>
-                    <p className="md:hidden block text-xs">{blurb.length > 48 ? blurb.slice(0,48) + "..." : blurb }</p>
-                    <div className="mt-4 flex flex-wrap">
-                        { languages.map((lang, idx) => ( 
-                            <div key={idx} className="mr-1 p-1 border-2 w-fit h-fit">
-                                <p className="text-xs">{lang}</p>
-                            </div>
-                        ))}
-                    </div> */}
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className={`flex flex-col justify-between transition shadow-xl group-hover:shadow-black/100 shadow-black/30 ring-4 ring-transparent group-hover:ring-accent-500 group-focus:ring-accent-500 group-active:ring-accent-500 relative aspect-square w-full overflow-hidden ${getBg(idx)}`}>
+                <Image src={images[0]} alt="image" fill={true} objectFit="cover" className="z-[25] absolute top-0 left-0 max-w-full h-auto" />
+                <div className="p-10 text-center h-full w-full bg-gradient-to-b from-black/50 to-black/95 centered relative z-[27]"> {/*  centered justify-start z-[27] relative h-16 px-4 overflow-hidden */}
+                    <h5 className="!text-stone-300 border-b-2 border-stone-300 w-fit">{name}</h5>
                 </div>
                 {/* <Image src={images[0]} alt="image" width={1280} height={960} className="opacity-40 rounded-md z-[25] absolute bottom-0 translate-y-[20px] right-0 translate-x-1/4 max-w-full h-auto" /> */}
                 {/* <div className="p-2 z-[26] absolute top-16 left-0 transition translate-y-full group-hover:translate-y-0 w-full h-full bg-stone-950/90">

@@ -8,7 +8,7 @@ const Footer = () => {
     <section id="footer" className={`default-p-x w-full py-20 h-fit bg-stone-950`}>
         <div className="flex flex-row-reverse items-start justify-between">
             <div className="h-min w-full text-right flex flex-col items-end justify-start">
-              <h1 className="font-bebas text-white">Ryan Mohamed</h1>
+              <h4 className="text-white">Ryan Mohamed</h4>
               <p className="text-stone-300">Software Engineer, Cat Dad, Pizza Lover.</p>
               <div className="w-1/3">
                 <Image src="/personal.png" alt="personal logo" width={1280} height={960} className="max-w-full h-auto hue-rotate-[60deg]" />

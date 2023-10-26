@@ -1,4 +1,4 @@
-import { ProjectType } from '@/components/Project';
+import { ProjectType } from "../src/components/Project";
 
 const Projects: Record<string, ProjectType> = {
     AfterSchoolStartup: {
@@ -422,8 +422,46 @@ const Projects: Record<string, ProjectType> = {
         link: "https://www.afterschoolstartup.com"
     },
 
+    AllergEase: {
+      name: "AllergEase",
+      blurb: "An application to find food recommendations and recipes based on your allergies.",
+      desc: "iOS port of the original Android mobile application. Emphasizes best practice REST API consumption using Swift and SwiftUI. Part of 38 applications delievered within a one-week deadline.",
+      date: new Date(1692248286),
+      images: [
+        "/thumbnails/allergease.png",
+        "/allergease/1.png",
+        "/allergease/2.png",
+        "/allergease/3.png"
+      ], 
+      skills: [
+        "Swift",
+        "Swift UI",
+        "REST API",
+        "Cross-Platform Application",
+        "Software Development Life Cycle",
+        "Agile",
+      ],
+      additionalSkills: [
+        "Swift",
+        "Swift UI",
+        "REST API",
+        "Cross-Platform Application",
+        "Software Development Life Cycle",
+        "Agile",
+        "Version Control",
+        "Git",
+        "GitHub",
+        "Sprint"
+      ],
+      paradigms: [],
+      languages: ["Swift", "SwiftUI"],
+      associatedWith: ["i4software"],
+      link: "https://www.afterschoolstartup.com",
+      github: "sd"
+    },
+
     MessageQueues: {
-        name: "Message Queues",
+        name: "Message Queues w/ C",
         blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
         images: [
@@ -444,7 +482,7 @@ const Projects: Record<string, ProjectType> = {
     },
 
     Posix: {
-        name: "After School Startup",
+        name: "Linux Posix w/ C",
         blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
         images: [

@@ -54,7 +54,7 @@ const Project = ({ project }: { project: ProjectType }) => {
   return (
     <div className="flex flex-col md:flex-row h-max">
       <div className="flex-1">
-        <h2 className="font-bebas mb-2">{project.name}</h2>
+        <h2 className=" mb-2">{project.name}</h2>
         <p className="text-lg">{project.blurb}</p>
 
         <div className="my-4 flex space-x-4">
@@ -85,7 +85,7 @@ const Project = ({ project }: { project: ProjectType }) => {
           className="h-min cursor-pointer mb-10"
         >
           {media.map((video, index) => (
-            <div key={index} className="aspect-video bg-red-200 relative overflow-hidden">
+            <div key={index} className="aspect-video relative overflow-hidden">
               {index < (project?.videos?.length ?? 0) ? (
                 <LazyLoadComponent threshold={10}>
                   <video
