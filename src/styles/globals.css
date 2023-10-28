@@ -48,6 +48,9 @@
   .default-p-x {
     @apply lg:px-[20%] md:px-36 p-3;
   }
+  .side-panel {
+    @apply pb-6 px-6 md:w-1/5 md:screen-h w-full overflow-y-scroll no-scrollbar md:bg-gradient-to-b bg-gradient-to-t from-transparent to-stone-100 dark:to-stone-600 border-r-[1px] border-dashed border-stone-300 dark:border-stone-800;
+  }
   .tabable {
     @apply outline-none active:ring-2 focus:ring-2 ring-accent-700;
   }
@@ -75,6 +78,9 @@
   .exp-item {
     @apply mb-3;
   }
+  .project-category {
+    @apply mb-4;
+  }
 }
 
 @layer utilities {
@@ -85,16 +91,25 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
   .screen-h {
-    /* height: calc(100vh - 110px); */
-    height: calc(100vh);
+    height: calc(100vh - 120px);
+    /* height: calc(100vh); */
   }
   .min-screen-h {
-    /* min-height: calc(100vh - 110px); */
-    min-height: calc(100vh);
+    min-height: calc(100vh - 120px);
+    /* min-height: calc(100vh); */
   }
   .nav-h {
     height: 110px;
+  }
+  .no-drag {
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari and older versions of Chrome */
+    -ms-user-select: none; /* Internet Explorer/Edge */
   }
 }
 

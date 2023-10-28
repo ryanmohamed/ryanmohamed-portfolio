@@ -63,7 +63,7 @@ const Hero = () => {
       { /* begin main text + links */}
       <div className="relative">
         {/* <BlackCat className="md:block hidden self-start w-1/2 h-auto fill-stone-950 dark:fill-stone-50 md:mt-0" /> */}
-        
+
         {/* main text */}
         <div className="md:w-3/4 md:mb-0 mb-6">
           <h1 className="mb-2 font-bold w-full">Hi 👋, I&apos;m Ryan.</h1>

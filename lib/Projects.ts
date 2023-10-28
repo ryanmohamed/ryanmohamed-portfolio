@@ -1,11 +1,19 @@
 import { ProjectType } from "../src/components/Project";
 
+export const Categories = {
+  "Full Stack": ["Full-Stack Development", "Front-End Development", "Back-End Development"],
+  "AI & Machine Learning": ["Deep Learning", "LLMs"],
+  "Computer Vision": ["Deep Learning", "Computer Vision"],
+  "Data": ["Data", "Databases", "SQL"],
+  "Mobile": ["Mobile Development"]
+}
+
 const Projects: Record<string, ProjectType> = {
     AfterSchoolStartup: {
         name: "After School Startup",
         blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
-        date: new Date(1692248286),
+        // date: new Date(1692248286),
         images: [
           "/thumbnails/afterschoolstartup.png",
           "/afterschoolstartup/1.png",
@@ -25,6 +33,7 @@ const Projects: Record<string, ProjectType> = {
           "REST API"
         ],
         additionalSkills: [
+          "Full-Stack Development",
           "Software Development Life Cycle",
           "Agile",
           "REST API",
@@ -39,13 +48,14 @@ const Projects: Record<string, ProjectType> = {
           "Google Cloud Platform (GCP)",
           "NoSQL",
           "OpenAI",
+          "LLMs",
           "PayPal",
           "Stripe",
           "RevenueCat",
           "Webhooks",
           "Middleware",
           "Server-Side Rendering",
-          "Payment Processing"
+          "Payment Processing",
         ],
         paradigms: [],
         languages: ["TypeScript"],
@@ -80,6 +90,7 @@ const Projects: Record<string, ProjectType> = {
           "Tailwind CSS"
         ],
         additionalSkills: [
+          "Full-Stack Development",
           "Software Development Life Cycle",
           "Agile",
           "GitHub",
@@ -95,6 +106,7 @@ const Projects: Record<string, ProjectType> = {
           "Google Cloud Platform (GCP)",
           "NoSQL",
           "OpenAI",
+          "LLMs",
           "PayPal",
           "Stripe",
           "RevenueCat",
@@ -130,6 +142,22 @@ const Projects: Record<string, ProjectType> = {
           "Server-Side Rendering",
           "Geocoding",
           "Caching",
+        ],        
+        additionalSkills: [
+          "Full-Stack Development",
+          "Software Development Life Cycle",
+          "Agile",
+          "Version Control",
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Tailwind CSS",
+          "REST API",
+          "Google Cloud Platform (GCP)",
+          "Server-Side Rendering",
+          "Geocoding",
+          "Caching",
+          "GitHub",
         ],
         languages: ["TypeScript"],
         associatedWith: ["i4software"],
@@ -153,6 +181,7 @@ const Projects: Record<string, ProjectType> = {
           "Tailwind CSS"
         ],
         additionalSkills: [
+          "Full-Stack Development",
           "Software Development Life Cycle",
           "Agile",
           "REST API",
@@ -197,7 +226,7 @@ const Projects: Record<string, ProjectType> = {
         "CSS"
       ],
       additionalSkills: [
-        "Full-stack development",
+        "Full-Stack Development",
         "Collaborative Coding",
         "Agile",
         "Requirements Analysis",
@@ -230,12 +259,12 @@ const Projects: Record<string, ProjectType> = {
         "/thumbnails/portfoliov1.png",
       ],
       skills: [
-        "TypeScript",
+        "JavaScript",
+        "React",
         "Next.js",
-        "Firebase",
-        "Google Cloud Platform (GCP)",
-        "PayPal",
-        "Server-Side Rendering"
+        "Framer-Motion",
+        "CSS",
+        "JSON"
       ],
       languages: ["JavaScript"],
       associatedWith: ["personal"],
@@ -296,6 +325,32 @@ const Projects: Record<string, ProjectType> = {
         "Tailwind CSS",
         "Server-Side Rendering"
       ],
+      additionalSkills: [
+        "Full-Stack Development",
+        "Back-end Development",
+        "Node.js",
+        "MVC Architecture",
+        "Agile",
+        "TypeScript",
+        "Next.js",
+        "Google Cloud Platform (GCP)",
+        "PostgreSQL",
+        "ORM",
+        "Prisma",
+        "Docker",
+        "Redis",
+        "Stripe",
+        "DALLE-2",
+        "WebSockets",
+        "Socket.io",
+        "REST API",
+        "RPC",
+        "Tailwind CSS",
+        "Server-Side Rendering",
+        "Requirements Analysis",
+        "Unit Testing",
+        "Integration Testing",
+      ],
       languages: ["TypeScript", "PostgreSQL"],
       associatedWith: ["personal"],
       link: "https://github.com/ryanmohamed/stripe-openai-socket-generation",
@@ -324,6 +379,7 @@ const Projects: Record<string, ProjectType> = {
           "Linux"
         ],
         additionalSkills: [
+          "Databases",
           "Software Development Life Cycle",
           "Agile",
           "JIRA",
@@ -356,6 +412,7 @@ const Projects: Record<string, ProjectType> = {
         desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
         images: [
           "/thumbnails/unet.png",
+          "/unet/1.png",
         ],
         skills: [
           "Python",
@@ -366,7 +423,7 @@ const Projects: Record<string, ProjectType> = {
           "Convolutional Neural Network",
           "Deep Learning",
           "U-NET Architecture",
-          "Biomedical Image Analysis"
+          "Biomedical Image Analysis",
         ],
         languages: ["TypeScript"],
         associatedWith: ["queenscollege"],
@@ -393,6 +450,26 @@ const Projects: Record<string, ProjectType> = {
           "Sequelize",
           "ORM",
           "REST API"
+        ],      
+        additionalSkills: [
+          "Full-Stack Development",
+          "Collaborative Coding",
+          "Agile",
+          "Requirements Analysis",
+          "Unit Testing",
+          "Integration Testing",
+          "JavaScript",
+          "React",
+          "Node.js",
+          "Express",
+          "JWT Authentication",
+          "MySQL",
+          "ORM",
+          "Sequelize",
+          "Test-Driven Development",
+          "REST API",
+          "CRUD",
+          "CSS",
         ],
         languages: ["JavaScript", "SQL"],
         associatedWith: ["queenscollege"],
@@ -416,8 +493,19 @@ const Projects: Record<string, ProjectType> = {
           "Google Cloud Platform (GCP)",
           "PayPal",
           "Server-Side Rendering"
+        ],        
+        additionalSkills: [
+          "Back-End Development",
+          "Networking",
+          "OAuth2",
+          "Google Cloud Platform",
+          "REST API",
+          "HTTP/HTTPS",
+          "TCP/IP",
+          "JavaScript",
+          "Node.js",
         ],
-        languages: ["TypeScript"],
+        languages: ["JavaScript"],
         associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
     },
@@ -426,7 +514,7 @@ const Projects: Record<string, ProjectType> = {
       name: "AllergEase",
       blurb: "An application to find food recommendations and recipes based on your allergies.",
       desc: "iOS port of the original Android mobile application. Emphasizes best practice REST API consumption using Swift and SwiftUI. Part of 38 applications delievered within a one-week deadline.",
-      date: new Date(1692248286),
+      // date: new Date(1692248286),
       images: [
         "/thumbnails/allergease.png",
         "/allergease/1.png",
@@ -442,6 +530,8 @@ const Projects: Record<string, ProjectType> = {
         "Agile",
       ],
       additionalSkills: [
+        "Mobile Development",
+        "iOS Development",
         "Swift",
         "Swift UI",
         "REST API",
@@ -469,14 +559,27 @@ const Projects: Record<string, ProjectType> = {
           "/afterschoolstartup/2.png"
         ],
         skills: [
-          "TypeScript",
-          "Next.js",
-          "Firebase",
-          "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+          "Operating Systems",
+          "C",
+          "Linux",
+          "Multi-processing",
+          "POSIX System Calls",
+          "Message Queues",
+          "Pipes",
+          "IPC"
+        ],      
+        additionalSkills: [
+          "Data",
+          "Operating Systems",
+          "C",
+          "Linux",
+          "POSIX System Calls",
+          "Message Queues",
+          "Pipes",
+          "Blocking",
+          "IPC"
         ],
-        languages: ["TypeScript"],
+        languages: ["C"],
         associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
     },
@@ -490,17 +593,113 @@ const Projects: Record<string, ProjectType> = {
           "/afterschoolstartup/2.png"
         ],
         skills: [
-          "TypeScript",
-          "Next.js",
-          "Firebase",
-          "Google Cloud Platform (GCP)",
-          "PayPal",
-          "Server-Side Rendering"
+          "Operating Systems",
+          "C",
+          "Linux",
+          "Multi-processing",
+          "Multi-threading",
+          "Shared Memory",
+          "POSIX System Calls",
+          "Message Queues",
+          "Pipes",
+          "IPC"
+        ],      
+        additionalSkills: [
+          "Data"
         ],
-        languages: ["TypeScript"],
+        languages: ["C"],
         associatedWith: ["queenscollege"],
         link: "https://www.afterschoolstartup.com"
-    }
+    },
+
+    MRIImageProcessing: {
+      name: "MRI Image Processing",
+      blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
+      desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+      // date: new Date(1692248286),
+      images: [
+        "/thumbnails/mri-image-processing.png",
+        "/mri-image-processing/1.png",
+        "/mri-image-processing/2.png",
+      ],      
+      skills: [
+        "C++",
+        "CMake",
+        "ITK",
+        "Biomedical Image Analysis",
+        "Image Preprocessing",
+      ],
+      additionalSkills: [
+        "Computer Vision",
+        "Intensity Standardization",
+        "Inhomogenity (Bias) Correction",
+        "File I/O",
+      ],
+      paradigms: [],
+      languages: ["C++"],
+      associatedWith: ["queenscollege"],
+      github: "sd"
+  },
+
+  MRIImageRegistration: {
+    name: "MRI Image Registration",
+    blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
+    desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+    // date: new Date(1692248286),
+    images: [
+      "/thumbnails/mri-image-registration.png",
+      "/mri-image-registration/1.png",
+      "/mri-image-registration/2.png",
+      "/mri-image-registration/3.png"
+    ],   
+    skills: [
+      "C++",
+      "CMake",
+      "ITK",
+      "Biomedical Image Analysis",
+      "Image Preprocessing",
+    ],
+    additionalSkills: [
+      "Computer Vision",
+      "Intensity Standardization",
+      "Inhomogenity (Bias) Correction",
+      "File I/O",
+    ],
+    paradigms: [],
+    languages: ["C++"],
+    associatedWith: ["queenscollege"],
+    github: "sd"
+  },
+
+  MRIImageSegmentation: {
+    name: "MRI Image Segmentation",
+    blurb: "An After School program meant to give middle and high school students the emerging skills of tomorrow, today.",
+    desc: "Developed system architecture and handled version control & CI/CD pipeline. Integrated and developed authentication, NoSQL database, user role system, payment gateway, webhooks, external and internal API endpoints, and server-side rendered pages.",
+    // date: new Date(1692248286),
+    images: [
+      "/thumbnails/mri-image-segmentation.png",
+      "/mri-image-segmentation/1.png",
+      "/mri-image-segmentation/2.png",
+      "/mri-image-segmentation/3.png"
+    ],   
+    skills: [
+      "C++",
+      "CMake",
+      "ITK",
+      "Biomedical Image Analysis",
+      "Image Preprocessing",
+    ],
+    additionalSkills: [
+      "Computer Vision",
+      "Intensity Standardization",
+      "Inhomogenity (Bias) Correction",
+      "File I/O",
+    ],
+    paradigms: [],
+    languages: ["C++"],
+    associatedWith: ["queenscollege"],
+    github: "sd"
+  },
 
 };
 

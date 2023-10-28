@@ -3,7 +3,7 @@ import Section from './Section';
 import Thumbnail from './Thumbnail';
 import Project, { ProjectType } from './Project';
 import Projects from '../../lib/Projects';
-import { AnimatePresence, motion } from 'framer-motion';
+import Category from './Category';
 
 const ProjectsGrid = () => {
     const [ filteredProjects, setFilteredProjects ] = useState<ProjectType[] | null>(Object.values(Projects)); 
@@ -72,8 +72,50 @@ const ProjectsGrid = () => {
     };
 
     return (
-        <Section id="projects" name="Projects" subtitle="Some of examples of my work. Click a tile to see more. 🦄">
+        <Section id="projects" name="Projects" subtitle="Take a look at some projects I've worked on.">
             
+            <Category 
+                id="fullstack"
+                terms={["Full-Stack Development", "Front-End Development", "Back-End Development"]}
+            >
+                <h5>Full-Stack Development</h5>
+                <p>Projects concerning the front-end, back-end, databases, security and everything in between.</p>
+            </Category>
+
+            <Category 
+                id="ai"
+                terms={["Deep Learning", "LLMs"]}
+                reverse
+            >
+                <h5>AI & Machine Learning</h5>
+                <p>Projects where I architect or incorporate machine learning models.</p>
+            </Category>
+
+            <Category 
+                id="cv"
+                terms={["Deep Learning", "Computer Vision"]}
+                reverse
+            >
+                <h5>Computer Vision</h5>
+                <p>Projects that harness the unique sight of computation.</p>
+            </Category>
+
+            <Category 
+                id="data"
+                terms={["Data", "Databases", "SQL"]}
+            >
+                <h5>Data</h5>
+                <p>Projects that primarily revolve around the use of data and databases.</p>
+            </Category>
+
+            <Category 
+                id="mobile"
+                terms={["Mobile Development"]}
+            >
+                <h5>Mobile</h5>
+                <p>Projects primarily made for iOS.</p>
+            </Category>
+
             {/* <div>
                 <p>Search by technology:</p>
                 <input placeholder="(ex: SQL)" onChange={handleInputChange}/>
@@ -83,7 +125,7 @@ const ProjectsGrid = () => {
             </div> */}
             
             {/* grid */}
-            <div className="w-full grid grid-flow-row-dense grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+            {/* <div className="w-full grid grid-flow-row-dense grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
                 { filteredProjects?.length !== Object.values(Projects).length && <p>Search results for</p>}
                 {filteredProjects?.map((project, index) => {
                     let classes = "transition row-span-1 col-span-1";
@@ -127,7 +169,8 @@ const ProjectsGrid = () => {
                         </motion.div>
                     )
                 }
-            </AnimatePresence>
+            </AnimatePresence> */}
+
         </Section>
     )
 }

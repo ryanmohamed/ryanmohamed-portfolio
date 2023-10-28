@@ -26,13 +26,11 @@ const BulletPoint = ({ className, left, ...props }: {
 
 export default function Home() {
 
-
-
   return (
     <main className="min-screen-h w-full relative">
 
-      <div className="aspect-square 2xl:w-96 xl:w-72 w-64 2xl:h-96 xl:h-72 h-64 rounded-full bg-accent-500/60 blur-[7.5rem] absolute top-10 lg:left-[20%] md:left-36 left-[5rem]  -z-30 ">
-        <div className="aspect-square 2xl:w-[30rem] xl:w-[24rem] lg:w-[20rem] w-64 2xl:h-[30rem] xl:h-[24rem] lg:h-[20rem] h-64 rounded-full bg-purple-400/100 absolute top-[50%] left-[70%] -z-25 "></div>
+      <div className="2xl:w-96 xl:w-72 w-64 2xl:h-96 xl:h-72 h-64 rounded-full bg-accent-500/60 blur-[7.5rem] absolute top-10 lg:left-[20%] md:left-36 left-[5rem]  -z-30 ">
+        <div className="2xl:w-[30rem] xl:w-[24rem] lg:w-[20rem] w-64 2xl:h-[30rem] xl:h-[24rem] lg:h-[20rem] h-64 rounded-full bg-purple-400/100 absolute top-[50%] left-[70%] -z-25"></div>
       </div>
 
       <Hero />

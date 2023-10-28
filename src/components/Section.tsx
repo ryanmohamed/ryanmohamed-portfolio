@@ -32,7 +32,7 @@ const Section = ({ id, name, subtitle, className, children, ...props }: { id: st
   return (
     <section ref={parentRef} {...props} id={id} className={`default-p-x w-full mb-20 ${className ? className : ""}`}>
         <div className="mb-10">
-            <h3>{name}</h3>
+            <h2>{name}</h2>
             { subtitle && <p>{subtitle}</p>}
         </div>
         <div ref={childRef}>{children}</div>

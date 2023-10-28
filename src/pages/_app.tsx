@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import '@/styles/globals.css';
 
 import { Poppins, Barlow, DM_Sans, Space_Grotesk, Open_Sans, Bebas_Neue } from 'next/font/google'
+import { ReactElement, ReactNode } from 'react';
+import { NextPage } from 'next';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -40,13 +42,25 @@ const bebas = Bebas_Neue({
   weight: ["400"]
 })
 
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
+ 
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout,
+  pageProps: any
+}
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+
+  // Use the layout defined at the page level, if available
+  const getLayout = Component?.getLayout ?? ((page) => page)
+  
   return (
-    <main className={`${poppins.variable} ${barlow.variable} ${dm.variable} ${space.variable} ${open.variable} ${bebas.variable} font-sans relative`}>
+    <main className={`pt-[120px] ${poppins.variable} ${barlow.variable} ${dm.variable} ${space.variable} ${open.variable} ${bebas.variable} font-sans relative`}>
       <Nav />
       <main className="">
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </main>
     </main>
   );
